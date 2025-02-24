@@ -21,9 +21,9 @@ type BannerRepo interface {
 
 type BannerUsecase interface {
 	Create(banner *Banner) error
-	GetByID(id int64) (*Banner, error)
+	GetByID(id uint) (*Banner, error)
 	Update(banner *Banner) error
-	Delete(id int64) (*Banner, error)
+	Delete(id uint) (*Banner, error)
 	ListActive() ([]*Banner, error)
 	List(page, limit int) ([]*Banner, error)
 }
